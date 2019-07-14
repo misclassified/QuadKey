@@ -84,7 +84,7 @@ class TileSystem:
     @staticmethod
     def pixel_to_tile(pixel):
         """Transform pixel to tile coordinates"""
-        return pixel[0] / 256, pixel[1] / 256
+        return int(pixel[0] / 256), int(pixel[1] / 256)
 
     @staticmethod
     def tile_to_pixel(tile, centered=False):
