@@ -102,7 +102,7 @@ class TileSystem:
         tile_x = tile[0]
         tile_y = tile[1]
         quadkey = ""
-        for i in xrange(level):
+        for i in range(level):
             bit = level - i
             digit = ord('0')
             mask = 1 << (bit - 1)  # if (bit - 1) > 0 else 1 >> (bit - 1)
@@ -118,7 +118,7 @@ class TileSystem:
         """Transform quadkey to tile coordinates"""
         tile_x, tile_y = (0, 0)
         level = len(quadkey)
-        for i in xrange(level):
+        for i in range(level):
             bit = level - i
             mask = 1 << (bit - 1)
             if quadkey[level - bit] == '1':
